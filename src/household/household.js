@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text, View, Image, FlatList, TouchableOpacity} from 'react-native';
+import {StyleSheet, Text, View, Image, FlatList, TouchableOpacity,Button} from 'react-native';
 
 const members = [
   {
@@ -110,7 +110,7 @@ export function Household({navigation}) {
           Awesome Smiths
         </Text>
       </View>
-      <View style={{backgroundColor: 'red'}}>
+      <View >
         <Text style={{color: '#C2C9D1', fontSize: 20}}>Members </Text>
         <FlatList
           data={members}
@@ -147,7 +147,7 @@ export function Household({navigation}) {
           </View>
         </View> */}
       </View>
-      <View style={{backgroundColor: 'yellow',marginTop:20}}>
+      <View style={{marginTop:20}}>
         <Text style={{color: '#C2C9D1', fontSize: 20}}>Invited +</Text>
         <FlatList
           data={Invited}
@@ -169,6 +169,8 @@ export function Household({navigation}) {
               source={require('../assets/Photo.jpg')}/>
       </View> */}
       </View>
+    
+
     </View>
   );
 }

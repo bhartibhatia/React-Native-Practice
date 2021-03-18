@@ -1,5 +1,5 @@
 import React from 'react';
-import {Image, StyleSheet, Text, View} from 'react-native';
+import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
 const Login = ({navigation}) => {
   return (
@@ -21,10 +21,17 @@ const Login = ({navigation}) => {
           marginTop: 20,
         }}
         onPress={() => {
-            navigation.navigate('myownhouse')
-        }}>
+            navigation.navigate('addTask')
+        }} >
         Sign In
       </Text>
+      <TouchableOpacity onPress={()=>{
+        console.log("Button-Pressed")
+        navigation.navigate('bottomTab')
+      }
+      } >
+        <Text>Go To Bottom Tab</Text>
+      </TouchableOpacity>
     </View>
   );
 };
