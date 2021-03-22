@@ -1,4 +1,4 @@
-import React from 'react';
+import React ,{useState} from 'react';
 import {
   View,
   Text,
@@ -11,18 +11,25 @@ import {
 
 
 export function AddTask() {
+ const [read, setRead] = useState('');
+ 
   return (
     <View style={styles.mainContainer}>
       <View style={styles.textContainer}>
         <Text style={{...styles.textDesign, color: 'grey'}}>Cancel</Text>
         <Text style={{...styles.textDesign, fontWeight: 'bold'}}>Add Task</Text>
-        <Text style={{...styles.textDesign, color: '#62C7CB'}}>Save</Text>
+        <Text style={{...styles.textDesign, color: '#62C7CB'}} onPress={() =>{
+          alert(`your task name is ${read}`)
+        }} >Save</Text>
       </View>
       <ScrollView>
       <View style={styles.secondContainer}>
         <TextInput
           style={{...styles.textInput, borderBottomWidth: 1}}
-          placeholder={'Task Name'}
+          placeholder={'Task Name'} onChangeText={(ptanhemujhe)=>{
+            console.log('ptanhemujhe',ptanhemujhe);
+            setRead(ptanhemujhe)
+          }}
         />
         <View style={styles.middleContainer}>
           <Text style={styles.textAssign}>Assign To </Text>
@@ -49,8 +56,11 @@ export function AddTask() {
 
 
 <View style={styles.thirdContainer}>
-<TextInput style={styles.messageInput} placeholder={'Notes'} numberOfLines={3} />
+<TextInput style={styles.messageInput} placeholder={'Notes'} numberOfLines={3} multiline={true} textAlignVertical="top"/>
 </View>
+
+
+<Text>{read}</Text>
 </ScrollView>
 
     </View>
@@ -100,7 +110,7 @@ const styles = StyleSheet.create({
   },
   messageInput:{
       marginLeft:24,
-      backgroundColor:'blue',
+   
       
   },
   thirdContainer:{

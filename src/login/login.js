@@ -32,6 +32,15 @@ const Login = ({navigation}) => {
       } >
         <Text>Go To Bottom Tab</Text>
       </TouchableOpacity>
+
+      <TouchableOpacity onPress={()=>{
+        console.log("Button-Pressed")
+        navigation.navigate('myflex')
+      }
+      } >
+        <Text>Go To Flex</Text>
+      </TouchableOpacity>
+      
     </View>
   );
 };

@@ -11,6 +11,7 @@ import {Tab1Screen1,Tab1Screen2,Tab1Screen3} from '../tab1';
 import {Tab2Screen1,Tab2Screen2} from '../tab2'
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
 import {AddTask} from '../addTask/addTask'
+import {flex} from '../flex/flex'
 
 
 
@@ -27,6 +28,7 @@ export default function Router() {
             <Stack.Screen name={"myother"} component={Other} options={{ title: 'MyOther'}}/>
             <Stack.Screen name={"bottomTab"} component={BottomNav} options={{headerShown:false}}/>
             <Stack.Screen name={"addTask"} component={AddTask} options={{headerShown:false}}/>
+            <Stack.Screen name={"myflex"} component={flex} options={{headerShown:false}} />
         </Stack.Navigator>
     </NavigationContainer>
   );
