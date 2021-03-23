@@ -1,82 +1,71 @@
 import React, {Component} from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, Image} from 'react-native';
+import { Directions } from 'react-native-gesture-handler';
 
 export const flex = () => {
   return (
     <View style={styles.mainContainer}>
-      <View style={styles.ContainerOne}>
-        <View style={styles.oneContainer}></View>
-        <View style={styles.secondContainer}></View>
-        <View style={styles.thirdConatiner}></View>
-        <View style={styles.fourthConatiner}></View>
-        <View style={styles.fifthConatiner}></View>
-        <View style={styles.sixthConatiner}></View>
+      <View style={{...styles.firstrow,position:'absolute',top:10,left:25}}>
+
       </View>
-      <View style={styles.Containertwo}>
-        <View style={styles.sevenConatiner}></View>
-        <View style={styles.eightConatiner}></View>
+      <View style={{...styles.secondrow,position:'absolute',top:140,left:50}}>
+
       </View>
+      <View style={{...styles.thirdrow,position:'absolute',top:280,left:85}}>
+
+      </View>
+      <View>
+        <Image source={{uri:'https://reactjs.org/logo-og.png'}} style={{height:100,width:100,borderRadius:50,alignSelf:'center'}}/>
+      </View>
+      {/* <View style={styles.firstrowConatiner}>
+        <View style={styles.firstrow}></View>
+        <View style={styles.secondrow}></View>
+        <View style={styles.thirdrow}></View>
+      </View> */}
+{/* 
+
+      <View style={styles.firstrowConatiner}>
+        <View style={styles.firstrow}></View>
+        <View style={styles.secondrow}></View>
+        <View style={styles.thirdrow}></View>
+      </View>
+
+
+      <View style={styles.firstrowConatiner}>
+        <View style={styles.firstrow}></View>
+        <View style={styles.secondrow}></View>
+        <View style={styles.thirdrow}></View>
+      </View> */}
+
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  mainContainer: {
-    flex: 1,
-    backgroundColor: 'lightblue',
-    margin: 20,
-    justifyContent: 'space-around',
-    flexDirection: 'row',
+  mainContainer:{
+    backgroundColor:'lightblue',
+    flex:1,
+    margin:10,
+    // justifyContent:'space-between'
   },
-  oneContainer: {
-    backgroundColor: 'red',
-    height: 100,
-    width: 100,
+  firstrowConatiner:{
+    flexDirection:'row',
+ 
+  justifyContent:'space-between'
+},
+  firstrow:{
+height:100,
+width:100,
+backgroundColor:'black'
   },
-  secondContainer: {
-    backgroundColor: 'green',
-    height: 100,
-    width: 100,
+  secondrow:{
+    height:100,
+width:100,
+backgroundColor:'pink'
   },
-  thirdConatiner: {
-    backgroundColor: 'gray',
-    height: 100,
-    width: 100,
-  },
-  fourthConatiner: {
-    backgroundColor: 'yellow',
-    height: 100,
-    width: 100,
-  },
-  fifthConatiner: {
-    backgroundColor: 'gray',
-    height: 100,
-    width: 100,
-  },
-  sixthConatiner: {
-    backgroundColor: 'green',
-    height: 100,
-    width: 100,
-  },
-  sevenConatiner: {
-    backgroundColor: 'red',
-    height: 100,
-    width: 100,
-  },
-  eightConatiner: {
-    backgroundColor: 'gray',
-    height: 100,
-    width: 100,
-  },
-
-  ContainerOne: {
-    
-    flexDirection: 'column',
-   
-  },
-  Containertwo:{
-    flexDirection: 'column',
-
-    
+  thirdrow:{
+    height:100,
+width:100,
+backgroundColor:'grey'
   }
 });
